@@ -1,104 +1,99 @@
-# Entrega 2 · Decisiones de tu sitio (25 pts) · Mié 4 de noviembre
+# Decisiones del sitio · For Magos
 
-Antes de construir tu sitio, tienes que decidir **cómo** lo vas a construir. En esta evaluación pones esas decisiones por escrito en un documento corto en Markdown: qué plugins usarás, qué páginas tendrá tu sitio, qué tema y en qué tiempos, y qué haces si algo sale mal.
+**Emprendimiento:** For Magos, camisetas de fútbol de las grandes ligas (Premier League, Liga Chilena, Liga Española, Bundesliga, Ligue 1 y Serie A), vestuario deportivo y ropa urbana.
 
-**Vale:** 25 puntos (25% de la Evaluación 03). Cada punto cuenta como un 1%.
+**Idea del sitio:** un sitio oscuro, rápido y con estilo de "drop" de streetwear, donde cada liga y cada colección se explora como un lookbook. La tienda (carro y pago) queda para una fase posterior.
 
-## Fechas
+---
 
-| Cuándo | Qué pasa |
-|---|---|
-| **Miércoles 28 de octubre** | Se libera la evaluación. Si ya terminaste la Sumativa 1, puedes empezar. El plazo de la Sumativa 1 (viernes 30) es para quienes tuvieron problemas con su equipo en clases. |
-| **Martes 3 de noviembre** | Clase de trabajo, entre todos y con ayudante. Conviene llegar con algunos plugins ya investigados. |
-| **Miércoles 4 de noviembre** | Clase de trabajo con sala extendida. **Entrega al término de la clase.** |
+## 1. Plugins
 
-## Qué tienes que entregar
+Datos revisados en las fichas de wordpress.org el miércoles 4 de noviembre de 2026.
 
-Un archivo **`decisiones.md`** en la carpeta `proyecto/` de tu repo de GitHub y el enlace a tu repo por AVA. Parte de la plantilla `plantilla-decisiones.md` y complétala. No es un informe: son tablas y frases cortas.
+| # | Plugin | Funcionalidad que resuelve | Gratis o de pago (qué incluye lo gratis) | Probado hasta (WP) | ¿Funciona con tema custom? | Ficha oficial |
+|---|---|---|---|---|---|---|
+| 1 | **Yoast SEO** (obligatorio, SEO) | Títulos y descripciones por página, sitemap XML y datos para que For Magos aparezca en Google al buscar "camisetas de fútbol" | Gratis, con versión Premium de pago. Lo gratis incluye análisis SEO y de legibilidad, sitemap y datos estructurados; Premium agrega herramientas de IA, bloqueo de bots y soporte directo | **7.1.4** (versión 28.8). Requiere WP 7.0 o superior y PHP 7.4 o superior | Sí, mientras el tema llame a `wp_head()` | https://wordpress.org/plugins/wordpress-seo/ |
+| 2 | **Contact Form 7** (obligatorio, contacto) | Formulario de contacto y de consulta por talla o camiseta | Gratis. Todas sus funciones son gratuitas; vive de donaciones | **7.1.4** (versión 6.2.4.1). Requiere **WP 7.1 o superior y PHP 8.3 o superior** | Sí. Trae un bloque de WordPress para insertar el formulario en cualquier página | https://wordpress.org/plugins/contact-form-7/ |
+| 3 | **BackWPup** | Copia de seguridad de archivos y base de datos antes de cada cambio grande, y restauración | Gratis, con versión Pro de pago. Lo gratis automatiza, guarda y restaura copias; Pro suma recuperación avanzada, migración, seguridad y algunos destinos de almacenamiento | **7.1.4** (versión 5.7.8). Requiere WP 5.3 o superior y PHP 7.4 o superior | Sí, respalda cualquier tema | https://wordpress.org/plugins/backwpup/ |
+| 4 | **Akismet Anti-spam** | Filtra el spam que llega por el formulario de contacto y los comentarios | Gratis solo para sitios personales sin fines comerciales; un sitio que vende necesita un plan de pago | **7.1.4** (versión 5.7.2; según un espejo de wordpress.org, la ficha puede mostrar 7.1.x). Requiere WP 5.8 o superior y PHP 7.2 o superior | Sí, no depende del tema | https://wordpress.org/plugins/akismet/ |
+| 5 | **Smash Balloon Social Photo Feed** (antes "Instagram Feed") | Muestra el feed de Instagram de For Magos en el home (looks y novedades) | Gratis, con versión Pro de pago. Lo gratis muestra el feed de tu cuenta con opciones de diseño; los extras (hashtags, lightbox, video) son Pro | **7.1.4** (versión 6.15.1). Requiere WP 4.1 o superior y PHP 7.4 o superior | Sí, con el shortcode `[instagram-feed]` o un bloque | https://wordpress.org/plugins/instagram-feed/ |
+| 6 | **Smush** | Comprime las fotos de camisetas y activa carga diferida (lazy load) para que el sitio sea rápido | Gratis, con versión Pro de pago. Lo gratis comprime las imágenes y activa lazy load; la compresión del archivo original a tamaño completo es Pro | **7.1.4** (versión 4.3.6). Requiere WP 6.4 o superior y PHP 7.4 o superior | Sí, trabaja sobre la biblioteca de medios | https://wordpress.org/plugins/wp-smushit/ |
 
-Qué puedes usar: `docs/03-funcionalidades.md` de tu repo `mi-emprendimiento`, la guía `guia-investigar-plugins.md` y las páginas que planteaste en el Parcial 02. También puedes usar IA para ordenar o redactar, pero **tienes que verificar los datos** y poder explicar tus decisiones si te lo pido.
+**Alternativas anotadas (por si un plugin falla; sus fichas aún no están revisadas):**
+- Contact Form 7 → otro plugin de formularios de wordpress.org, o un botón directo a WhatsApp
+- Akismet → Antispam Bee (gratis para sitios comerciales)
+- Smash Balloon → galería de bloques nativa de WordPress, con fotos subidas a mano
+- BackWPup → UpdraftPlus
+- Smush → comprimir las fotos a mano antes de subirlas
 
-## Cómo se evalúa
+**Requisitos que afectan al proyecto:** Contact Form 7 pide WP 7.1+ y PHP 8.3+, y Yoast pide WP 7.0+. Mi WordPress en Local WP y en InfinityFree debe cumplir esas versiones. Según el foro de InfinityFree, el hosting gratis usa PHP 8.4 desde fines de septiembre de 2026.
 
-| # | Qué se revisa | Puntos |
+---
+
+## 2. Páginas de la fase 1
+
+| # | Página | Por qué la elegí |
 |---|---|---|
-| 1 | Plugins | 10 |
-| 2 | Páginas de la fase 1 | 5 |
-| 3 | Plan del tema | 5 |
-| 4 | Plan B | 5 |
-| | **Total** | **25** |
+| 1 | **Inicio** (obligatoria) | Es la vitrina: presenta las ligas, las novedades y lleva al contacto |
+| 2 | **Contacto** (obligatoria) | Los clientes pedirán tallas y camisetas por formulario, WhatsApp e Instagram mientras no exista el carro |
+| 3 | **Camisetas de fútbol** | Es el producto principal. Se organiza por liga como catálogo, sin carro ni pago |
+| 4 | **Urban & Sport** | Muestra el vestuario deportivo y la ropa urbana como lookbook y marca el estilo moderno del sitio |
+| 5 | **Nosotros** | Cuenta qué es For Magos y por qué confiar, algo clave para una tienda nueva |
 
-### 1. Plugins (10 pts)
+> Adaptar a las páginas que planteé en el Parcial 02 si los nombres son distintos.
 
-Elige **al menos 5 plugins**. Cada uno vale **2 puntos**.
+**Páginas para una fase posterior:** Tienda con carro de compras, Pago (checkout), Mi cuenta, Seguimiento de pedido, Guía de tallas, Blog o Noticias, Preguntas frecuentes.
 
-- **Dos son obligatorios:** uno de **SEO** (por ejemplo, Yoast SEO) y uno de **contacto** (por ejemplo, Contact Form 7).
-- **Los otros 3 los eliges tú**, según lo que necesita tu sitio. Salen de las funcionalidades de tu `03-funcionalidades.md`. Por ejemplo: copia de seguridad (BackWPup), filtro de spam (Akismet), galería, newsletter, mapa o redes sociales.
+---
 
-Para cada plugin escribe, en la tabla de la plantilla:
+## 3. Plan del tema
 
-- La funcionalidad que resuelve.
-- Si es **gratis o de pago**, y qué incluye la versión gratis.
-- Con qué **versión de WordPress** es compatible ("probado hasta").
-- Si **funciona con un tema propio** (custom).
-- El **enlace a su ficha** en wordpress.org.
+- **Nombre del tema:** `magos-kickoff`
+- **Custom o descargado:** **Custom.** Es un tema de bloques (con `theme.json`) hecho por mí, para controlar el diseño y practicar lo aprendido. Si no avanza a más tardar el miércoles 11 de noviembre, cambio a un tema descargado (ver plan B).
+- **Estilo:** modo oscuro con un color de acento llamativo, tipografía variable grande, tarjetas por liga con animaciones suaves al hacer scroll, y fotos livianas en WebP.
 
-| Puntaje por plugin | Cuándo |
-|---|---|
-| 2 pts | Tiene todos los datos y se pueden verificar |
-| 1 pt | Falta un dato o alguno es incorrecto |
-| 0 pts | No está, o no tiene enlace a la ficha |
+### Carta Gantt (5 al 25 de noviembre)
 
-Si falta el plugin de **SEO** o el de **contacto**, esos 2 puntos no se otorgan. Se revisan algunos plugins al azar en su ficha oficial.
+| Etapa | Jue 5 – Dom 8 nov | Lun 9 – Vie 13 nov | Sáb 14 – Mar 17 nov | **Mié 18 nov** | Jue 19 – Mar 24 nov | **Mié 25 nov** |
+|---|---|---|---|---|---|---|
+| Identidad visual (logo, colores, tipografía) | ██████ | | | | | |
+| Estructura del tema en Local WP | ██ | ██████ | | | | |
+| Home | | ██████ | ██ | | | |
+| Páginas (4 más) | | ██ | ██████ | | | |
+| Plugins instalados y configurados | | | ██████ | | | |
+| Ajustes, pruebas y velocidad | | | | | ██████ | |
+| **Checkpoint** | | | | ✅ | | |
+| **Entrega final** | | | | | | ✅ |
 
-### 2. Páginas de la fase 1 (5 pts)
+```mermaid
+gantt
+    title For Magos · plan del sitio (5 al 25 de noviembre)
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d/%m
+    section Base
+    Identidad visual            :a1, 2026-11-05, 4d
+    Estructura del tema         :a2, 2026-11-06, 5d
+    section Contenido
+    Home                        :b1, 2026-11-09, 6d
+    Páginas (4 más)             :b2, 2026-11-11, 7d
+    Plugins                     :b3, 2026-11-14, 4d
+    section Cierre
+    Checkpoint                  :milestone, m1, 2026-11-18, 0d
+    Ajustes y pruebas           :c1, 2026-11-19, 6d
+    Entrega final               :milestone, m2, 2026-11-25, 0d
+```
 
-Elige **5 páginas** para construir primero. Cada una vale **1 punto**.
+---
 
-- **Inicio** y **Contacto** son obligatorias.
-- **Las otras 3 las eliges tú**, de las que planteaste en el Parcial 02. **No pueden ser del carro de compras** ni de pago: la tienda queda fuera de esta fase.
-- Para cada página, escribe en una línea **por qué la elegiste** (por ejemplo, porque responde a una funcionalidad o a lo que necesita tu persona).
-
-Las páginas que no elijas quedan para una fase posterior; anótalas.
-
-### 3. Plan del tema (5 pts)
-
-- **Carta Gantt (3 pts):** una tabla o un diagrama con las etapas de tu sitio entre el **5 y el 25 de noviembre**: identidad visual, home, páginas, plugins y ajustes. Marca el **checkpoint** (miércoles 18) y la **entrega final** (miércoles 25). La plantilla trae una tabla y un ejemplo en Mermaid.
-- **Nombre del tema (1 pt):** elige el nombre de tu tema.
-- **Custom o descargado (1 pt):** define cuál será y por qué en una línea. Si no estás seguro, elige uno y anota en el plan B cuándo cambiarías.
-
-### 4. Plan B (5 pts)
-
-¿Qué haces si algo no funciona? Escribe **al menos 3 riesgos** en una tabla. Cada riesgo lleva:
-
-- **Qué haces para resolverlo** (3 pts en total por los riesgos y sus mitigaciones).
-- **Cuándo lo activas**, con una fecha o una señal (2 pts en total).
-
-Ejemplos para inspirarte:
+## 4. Plan B
 
 | Riesgo | Qué hago | Cuándo se activa |
 |---|---|---|
-| Mi tema propio no funciona | Vuelvo al último commit; si no resulta, paso a un tema descargado | Miércoles 11 nov |
-| Un plugin falla o no es compatible | Uso la alternativa que dejé anotada | Al instalarlo |
-| InfinityFree da error 500 o 429 | Espero unos minutos y reintento; mientras, trabajo en Local WP | Si dura más de 1 hora |
-| El correo del formulario no llega | Pruebo otra configuración o muestro el mensaje de confirmación | Antes del 18 nov |
-
-Escribe riesgos de **tu** proyecto: copiar estos sin adaptarlos vale menos.
-
-## Reglas
-
-- La tarea es **individual**.
-- Todo dato de un plugin debe estar confirmado en su ficha oficial. La IA a veces inventa plugins o da datos viejos.
-- **Cambiar de idea después no te penaliza.** En el checkpoint (miércoles 18) corriges este mismo documento.
-- Entrega al término de la clase del miércoles 4 de noviembre.
-
-## Antes de entregar, revisa
-
-- [ ] Hay al menos 5 plugins, con SEO y contacto entre ellos.
-- [ ] Cada plugin tiene los 5 datos y el enlace a su ficha.
-- [ ] Hay 5 páginas, con Inicio y Contacto, y ninguna es del carro de compras.
-- [ ] Cada página tiene una línea de por qué la elegí.
-- [ ] Mi carta Gantt va del 5 al 25 de noviembre y marca el checkpoint y la entrega final.
-- [ ] Escribí el nombre del tema y si es custom o descargado.
-- [ ] Mi plan B tiene al menos 3 riesgos, cada uno con qué hago y cuándo.
-- [ ] El archivo se llama `decisiones.md`, está en `proyecto/` de mi repo y entregué el enlace por AVA.
+| Mi tema `magos-kickoff` no funciona o se rompe el diseño | Vuelvo al último commit de GitHub; si no resulta, paso a un tema de bloques descargado y le aplico mis colores y tipografía | Miércoles 11 nov, o si algo no se ve bien tras 2 horas de intentos |
+| El feed de Instagram no carga o se rompe (los cambios de la API de Meta lo afectan varias veces al año, según reseñas de la ficha) | Lo reemplazo por una galería de bloques con 6 fotos que subo yo | Al configurarlo, si no conecta en 30 minutos, o si deja de verse antes del 25 nov |
+| InfinityFree da error 500 o 429 | Espero unos minutos y reintento; mientras, sigo en Local WP y subo después | Si dura más de 1 hora |
+| El correo del formulario no llega desde InfinityFree | Pruebo otra configuración de correo; si no resulta, muestro un mensaje de confirmación y agrego un botón de WhatsApp como canal de respaldo | Antes del 18 nov |
+| Las fotos de camisetas pesan mucho y el sitio carga lento | Comprimo con Smush, reduzco el tamaño de las fotos antes de subirlas y bajo la cantidad de fotos del home | Si el home tarda más de 3 segundos en cargar en el celular |
+| Contact Form 7 no se instala o rompe el sitio porque pide WP 7.1+ y PHP 8.3+ | Actualizo WordPress o la versión de PHP en Local WP; si no se puede, uso la alternativa anotada o un botón de WhatsApp | Al instalarlo, antes del 14 nov |
+| No tengo fotos propias y las de marcas de lujo (Supreme, Gucci, LV) pueden tener derechos | Uso fotos propias o imágenes de referencia sin logos de terceros, y dejo la ropa de lujo como texto hasta tener fotos propias | Antes del checkpoint del 18 nov |
+| No alcanzo a terminar las 5 páginas | Dejo Nosotros para el final y lo reduzco a una sección del home | Martes 17 nov, si faltan más de 2 páginas |
