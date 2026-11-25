@@ -177,3 +177,47 @@ body:not(.home) .ast-above-header-wrap, body:not(.home) .ast-above-header-bar { 
 .fm-tb-item { padding: 9px 2.5rem; font-weight: 700; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; color: var(--fm-negro); }
 @keyframes fm-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .fm-tb-track { animation: none; } }
+
+/* ===== Catálogo con fotos y portada con destacados ===== */
+.fm-cat-section { padding: 3rem 1.25rem 1rem !important; }
+.fm-cat-section h2 { border-bottom: 2px solid var(--fm-dorado); padding-bottom: .5rem; margin-bottom: .75rem; }
+.fm-grid { gap: 1.5rem !important; margin-top: 1.5rem; }
+.fm-prod {
+  background: var(--fm-carbon); border: 1px solid var(--fm-gris); border-radius: 8px; overflow: hidden;
+  display: flex; flex-direction: column; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.fm-prod:hover { transform: translateY(-4px); border-color: var(--fm-dorado); box-shadow: 0 10px 24px rgba(0,0,0,.45); }
+.fm-prod .wp-block-image, .fm-card-img .wp-block-image { margin: 0 !important; background: #fff; aspect-ratio: 1 / 1; overflow: hidden; }
+.fm-prod .wp-block-image img, .fm-card-img .wp-block-image img { width: 100%; height: 100%; object-fit: contain; transition: transform .35s ease; }
+.fm-prod:hover .wp-block-image img, .fm-card-img:hover .wp-block-image img { transform: scale(1.04); }
+.fm-prod .fm-tag { margin: 1rem 1rem 0 !important; }
+.fm-prod h3 { font-size: 1.3rem !important; line-height: 1.15; margin: .35rem 1rem 0 !important; color: var(--fm-texto) !important; }
+.fm-prod .wp-block-buttons { margin: auto 1rem 1rem !important; padding-top: 1rem; }
+.fm-prod .wp-block-button, .fm-prod .wp-block-button__link { width: 100%; text-align: center; font-size: .8rem !important; }
+.fm-tag { color: var(--fm-dorado) !important; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; }
+.fm-card-img { padding: 0 !important; overflow: hidden; display: flex; flex-direction: column; }
+.fm-card-img > h3, .fm-card-img > p, .fm-card-img > .wp-block-buttons { margin-left: 1.25rem !important; margin-right: 1.25rem !important; }
+.fm-card-img > h3 { margin-top: 1.1rem !important; }
+.fm-card-img > .wp-block-buttons { margin-top: auto !important; margin-bottom: 1.25rem !important; padding-top: .5rem; }
+.fm-feature { padding: 4rem 1.25rem !important; }
+.fm-feature .wp-block-columns { max-width: 1100px; gap: 3rem !important; }
+.fm-feature .wp-block-image { margin: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--fm-dorado); box-shadow: 0 18px 40px rgba(201,162,39,.15); }
+.fm-feature .wp-block-image img { width: 100%; height: auto; display: block; }
+.fm-feature h2 { font-size: clamp(2.2rem, 5vw, 3.5rem) !important; color: var(--fm-dorado) !important; margin-top: .25rem; }
+.fm-feature p:not(.fm-tag) { color: var(--fm-texto-suave); }
+html { scroll-behavior: smooth; }
+.fm-cat-section h2[id] { scroll-margin-top: 90px; }
+@media (max-width: 768px) {
+  .fm-feature { padding: 2.5rem 1rem !important; }
+  .fm-feature .wp-block-columns { gap: 1.5rem !important; }
+  .fm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: .9rem !important; }
+  .fm-prod h3 { font-size: 1.05rem !important; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .fm-prod, .fm-prod img, .fm-card-img img { transition: none; } }
+
+/* Stock y tarjetas de la portada en grilla */
+.fm-stock { display: inline-block; margin: 1rem 1rem 0 !important; padding: .2rem .6rem; border-radius: 999px; background: rgba(46,160,67,.15); border: 1px solid #2ea043; color: #6fdd8b !important; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; align-self: flex-start; }
+.fm-stock::before { content: "● "; }
+.fm-prod .fm-stock + .fm-tag { margin-top: .5rem !important; }
+.fm-count { display: inline-block; margin-left: .5rem; color: var(--fm-dorado); font-weight: 700; }
+.fm-card.fm-card-img { border-top: 3px solid var(--fm-dorado); }
