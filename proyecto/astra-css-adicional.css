@@ -162,4 +162,18 @@ table, .wp-block-table table { border-collapse: collapse; width: 100%; }
 .entry-content p a, .entry-content li a, .ast-footer-copyright a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Ancho de lectura en páginas interiores */
-.page:not(.home) .entry-content { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+body.page:not(.home) .entry-content { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+
+/* Banner deslizante superior (solo en Inicio).
+   HTML en Apariencia > Personalizar > Cabecera > HTML 1, ubicado en la fila superior (Above Header). */
+body:not(.home) .ast-above-header-wrap, body:not(.home) .ast-above-header-bar { display: none !important; }
+.ast-above-header-bar, .ast-above-header-wrap .ast-above-header { background: var(--fm-dorado) !important; border: 0 !important; min-height: 0 !important; padding: 0 !important; }
+.ast-above-header-bar .site-above-header-wrap, .ast-above-header-bar .ast-builder-grid-row { min-height: 38px !important; max-width: 100% !important; padding: 0 !important; }
+.ast-above-header-bar .ast-builder-layout-element, .ast-above-header-bar .ast-header-html, .ast-above-header-bar .ast-builder-html-element { width: 100%; max-width: 100%; overflow: hidden; }
+.fm-topbar { width: 100%; overflow: hidden; background: var(--fm-dorado); color: var(--fm-negro); }
+.fm-tb-track { display: flex; width: max-content; animation: fm-marquee 28s linear infinite; }
+.fm-topbar:hover .fm-tb-track { animation-play-state: paused; }
+.fm-tb-group { display: flex; flex-shrink: 0; }
+.fm-tb-item { padding: 9px 2.5rem; font-weight: 700; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; color: var(--fm-negro); }
+@keyframes fm-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .fm-tb-track { animation: none; } }
