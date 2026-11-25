@@ -1,0 +1,162 @@
+/* ==========================================================
+   For Magos · CSS adicional para Astra
+   Identidad: negro carbón + dorado, estética urbana premium
+   Pegar en Apariencia > Personalizar > CSS adicional
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --fm-negro: #111111;
+  --fm-carbon: #1c1c1c;
+  --fm-gris: #2a2a2a;
+  --fm-dorado: #c9a227;
+  --fm-dorado-claro: #e0c065;
+  --fm-texto: #f2f2f2;
+  --fm-texto-suave: #bdbdbd;
+  /* Paleta global de Astra adaptada a For Magos */
+  --ast-global-color-0: #c9a227; /* acento */
+  --ast-global-color-1: #e0c065; /* acento hover */
+  --ast-global-color-2: #f2f2f2; /* títulos */
+  --ast-global-color-3: #d6d6d6; /* texto */
+  --ast-global-color-4: #111111; /* fondo */
+  --ast-global-color-5: #111111; /* fondo contenido */
+  --ast-global-color-6: #1c1c1c;
+  --ast-global-color-7: #2a2a2a;
+  --ast-global-color-8: #000000;
+}
+
+/* Secciones del home */
+.fm-hero { padding: 5rem 1.5rem !important; text-align: center; }
+.fm-hero h1 { font-size: clamp(2.6rem, 7vw, 5rem) !important; line-height: 1; margin: .5rem 0 1rem; }
+.fm-hero p { color: var(--fm-texto-suave); max-width: 640px; margin-left: auto !important; margin-right: auto !important; }
+.fm-hero p strong { color: var(--fm-dorado); letter-spacing: .3em; font-size: .85rem; }
+.fm-section { padding: 4rem 1.5rem !important; }
+.fm-section h2, .fm-cta h2 { font-size: clamp(2rem, 4vw, 3rem) !important; }
+.fm-cta {
+  padding: 3.5rem 1.5rem !important; margin-top: 2rem; text-align: center;
+  background: linear-gradient(135deg, #1c1c1c, #2b2414);
+  border-top: 1px solid var(--fm-dorado); border-bottom: 1px solid var(--fm-dorado);
+}
+.fm-card p { color: var(--fm-texto-suave); }
+.entry-content > .wp-block-columns, .entry-content > h2, .entry-content > p,
+.entry-content > ul, .entry-content > figure { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+.ast-single-post .entry-header, .page .entry-header { text-align: center; padding-top: 2.5rem; }
+
+body, .site, .site-content, .ast-separate-container,
+.ast-separate-container .ast-article-single,
+.ast-separate-container .ast-article-post,
+.ast-plain-container, .ast-page-builder-template {
+  background-color: var(--fm-negro) !important;
+  color: var(--fm-texto);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .entry-title, .site-title, .site-title a {
+  font-family: 'Bebas Neue', 'Inter', sans-serif !important;
+  letter-spacing: .04em;
+  color: var(--fm-texto) !important;
+}
+h1, .entry-title { color: var(--fm-dorado) !important; }
+
+a { color: var(--fm-dorado); }
+a:hover, a:focus { color: var(--fm-dorado-claro); }
+
+/* Cabecera */
+.site-header, .main-header-bar, .ast-primary-header-bar,
+.ast-mobile-header-wrap .ast-primary-header-bar {
+  background-color: #000 !important;
+  border-bottom: 2px solid var(--fm-dorado) !important;
+}
+.main-header-menu .menu-link, .ast-builder-menu .menu-item > .menu-link {
+  color: var(--fm-texto) !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+.main-header-menu .menu-item:hover > .menu-link,
+.main-header-menu .current-menu-item > .menu-link {
+  color: var(--fm-dorado) !important;
+}
+.ast-mobile-popup-drawer .ast-mobile-popup-inner,
+.ast-mobile-header-content, .main-header-menu .sub-menu {
+  background-color: var(--fm-carbon) !important;
+}
+.ast-mobile-menu-trigger-minimal, .menu-toggle { color: var(--fm-dorado) !important; }
+
+/* Botones */
+.wp-block-button__link, button, .button, input[type="submit"],
+.wpcf7-submit, .ast-button {
+  background-color: var(--fm-dorado) !important;
+  color: var(--fm-negro) !important;
+  border: 2px solid var(--fm-dorado) !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.wp-block-button__link:hover, button:hover, input[type="submit"]:hover,
+.wpcf7-submit:hover {
+  background-color: transparent !important;
+  color: var(--fm-dorado) !important;
+}
+.is-style-outline .wp-block-button__link {
+  background: transparent !important;
+  color: var(--fm-dorado) !important;
+}
+
+/* Secciones y tarjetas creadas con bloques */
+.fm-hero {
+  background: radial-gradient(circle at 70% 30%, #2b2414 0%, var(--fm-negro) 65%);
+  border-bottom: 1px solid var(--fm-dorado);
+}
+.fm-card, .wp-block-column.fm-card {
+  background: var(--fm-carbon);
+  border: 1px solid var(--fm-gris);
+  border-top: 3px solid var(--fm-dorado);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+.fm-card h3 { color: var(--fm-dorado) !important; }
+
+/* Tablas (guía de tallas) */
+table, .wp-block-table table { border-collapse: collapse; width: 100%; }
+.wp-block-table th, table th {
+  background: var(--fm-dorado); color: var(--fm-negro);
+}
+.wp-block-table td, table td, .wp-block-table th, table th {
+  border: 1px solid var(--fm-gris) !important; padding: .6rem;
+}
+.wp-block-table tr:nth-child(even) td { background: var(--fm-carbon); }
+
+/* Formulario de contacto */
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea, .wpcf7 select {
+  background: var(--fm-carbon) !important;
+  color: var(--fm-texto) !important;
+  border: 1px solid #555 !important;
+  border-radius: 4px; width: 100%;
+}
+.wpcf7 input:focus, .wpcf7 textarea:focus { border-color: var(--fm-dorado) !important; outline: none; }
+.wpcf7 label { color: var(--fm-texto-suave); font-weight: 600; }
+.wpcf7 form .wpcf7-response-output { border-color: var(--fm-dorado) !important; color: var(--fm-texto); }
+
+/* Pie de página */
+.site-footer, .site-below-footer-wrap, .ast-footer-copyright,
+.site-primary-footer-wrap {
+  background-color: #000 !important;
+  color: var(--fm-texto-suave) !important;
+  border-top: 2px solid var(--fm-dorado);
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  h1, .entry-title { font-size: 2.4rem !important; }
+  .fm-hero { padding: 2.5rem 1rem !important; }
+  .wp-block-columns { gap: 1rem; }
+}
+
+/* Ajustes de ancho y pie */
+.entry-content .wp-block-columns { max-width: 1100px; margin-left: auto !important; margin-right: auto !important; }
+.ast-footer-copyright, .site-below-footer-wrap .ast-builder-grid-row { border-top: 0 !important; }
+
+/* Accesibilidad: enlaces dentro del texto subrayados (Lighthouse) */
+.entry-content p a, .entry-content li a, .ast-footer-copyright a { text-decoration: underline; text-underline-offset: 3px; }
